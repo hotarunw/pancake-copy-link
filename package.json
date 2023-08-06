@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "@quasar/extras": "^1.16.5",
+    "quasar": "^2.12.3",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^1.0.14",
+    "@quasar/vite-plugin": "^1.4.1",
+    "@types/chrome": "^0.0.241",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@vitejs/plugin-vue": "^2.3.4",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard-with-typescript": "^37.0.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.16.1",
+    "prettier": "^3.0.1",
+    "sass": "^1.64.2",
+    "typescript": "^5.1.6",
+    "vite": "^2.9.16",
+    "vue-eslint-parser": "^9.3.1",
+    "vue-tsc": "^1.8.8"
+  },
+  "name": "copy-link2023",
+  "private": true,
+  "scripts": {
+    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite",
+    "format": "prettier --write \"**/*.+(js|json|yml|ts|tsx|vue)\"",
+    "lint": "eslint --ext .tsx,.ts,.vue src/",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "version": "0.0.0"
+}
