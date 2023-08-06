@@ -100,5 +100,6 @@ export const copyLinkByContentScript = async (
   }
   const result = f(title, url);
   console.log("result :>> ", result);
+  // ServiceWorkerではクリップボードAPIが使えないためContentScriptにメッセージ送信して実行に置き換え
   void chrome.tabs.sendMessage(id, { command: "copy", text: result });
 };

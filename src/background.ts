@@ -1,5 +1,7 @@
 import { copyLinkByContentScript, shareLink } from "./index";
 
+// ServiceWorker
+// ショートカット
 chrome.commands.onCommand.addListener((command) => {
   console.log("command :>> ", command);
 
@@ -8,6 +10,7 @@ chrome.commands.onCommand.addListener((command) => {
 
     switch (command) {
       case "copy":
+        // ServiceWorkerではクリップボードAPIが使えないためContentScriptにメッセージ送信して実行
         void copyLinkByContentScript(result.copy ?? "");
         break;
       case "share":
