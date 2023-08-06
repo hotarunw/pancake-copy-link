@@ -1,5 +1,20 @@
 # copy-link2023
 
+Webページのリンクをコピーするか共有する拡張機能。
+
+ショートカットでコピー`Ctrl + Shift + C` 共有`Ctrl + Shift + S` できる。
+タイトル&URLのエスケープ機能あり。
+
+## インストール
+
+自身でビルドする。
+
+## 対応サイト
+
+- コピー: 生テキスト
+- コピー: MarkDown
+- 共有: X(Twitter)
+
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
 ## Recommended IDE Setup
