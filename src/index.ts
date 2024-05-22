@@ -31,7 +31,9 @@ const generateMarkdownCopyLink = (title: string, url: string): string => {
 };
 
 const generateTwitterShareLink = (title: string, url: string): string => {
-  return `https://x.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+  return `https://x.com/intent/tweet?text=${encodeURIComponent(
+    title,
+  )}&url=${encodeURIComponent(url)}`;
 };
 
 export const generateCopyLink = new Map<
