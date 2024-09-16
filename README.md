@@ -1,31 +1,58 @@
-# copy-link2023
+# CRXJSを使ってChrome拡張機能をビルドしている
 
-Webページのリンクをコピーするか共有する拡張機能。
+[Introduction | CRXJS Vite Plugin](https://crxjs.dev/vite-plugin)
 
-ショートカットでコピー`Ctrl + Shift + C` 共有`Ctrl + Shift + S` できる。
-タイトル&URLのエスケープ機能あり。
+## 参考
 
-## インストール
+- [【TypeScript】ReactとCRXJS Vite Pluginで作るChrome拡張機能](https://zenn.dev/7oh/scraps/98d5cdcceb9bd8)
 
-自身でビルドする。
+# React + TypeScript + Vite
 
-## 対応サイト
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- コピー: 生テキスト
-- コピー: MarkDown
-- 共有: X(Twitter)
+Currently, two official plugins are available:
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Recommended IDE Setup
+## Expanding the ESLint configuration
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## Type Support For `.vue` Imports in TS
+- Configure the top-level `parserOptions` property like this:
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
+
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
