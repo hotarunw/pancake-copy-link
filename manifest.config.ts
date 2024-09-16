@@ -25,4 +25,9 @@ export default defineManifest((env) => ({
       matches: ["https://www.google.com/*", "https://www.google.co.jp/"],
     },
   ],
+  icons: {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png",
+  },
 }));

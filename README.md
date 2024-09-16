@@ -1,10 +1,40 @@
-# CRXJSを使ってChrome拡張機能をビルドしている
+# Pancake Copy Link
 
-[Introduction | CRXJS Vite Plugin](https://crxjs.dev/vite-plugin)
+ショートカットでコピー`Ctrl + Shift + C` 共有`Ctrl + Shift + S` できる。
+タイトル&URLのエスケープ機能あり。
+
+## インストール
+
+1. `npm install`
+2. `npm run build`
+3. パッケージ化されていない拡張機能を読み込む
+
+## 対応サイト
+
+- コピー: 生テキスト
+- コピー: MarkDown
+- 共有: X(Twitter)
 
 ## 参考
 
+CRXJSでChrome拡張機能をビルドしている。
+
+- [Introduction | CRXJS Vite Plugin](https://crxjs.dev/vite-plugin)
 - [【TypeScript】ReactとCRXJS Vite Pluginで作るChrome拡張機能](https://zenn.dev/7oh/scraps/98d5cdcceb9bd8)
+
+## Attribution
+
+### パンケーキの絵文字
+
+[Pancake Emoji](https://github.com/twitter/twemoji/blob/d94f4cf793e6d5ca592aa00f58a88f6a4229ad43/assets/svg/1f95e.svg) by [Twemoji](https://github.com/twitter/twemoji) / [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+## SVGからICON用のPNGを作成するスクリプト
+
+```sh
+magick -background none public/pancake.svg -resize 16x16   public/icon16.png
+magick -background none public/pancake.svg -resize 48x48   public/icon48.png
+magick -background none public/pancake.svg -resize 128x128 public/icon128.png
+```
 
 # React + TypeScript + Vite
 
