@@ -2,13 +2,13 @@ import { useState } from "react";
 import "./App.css";
 import iceLogo from "./assets/ice.svg";
 import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
+      <button>hogehoge</button>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img

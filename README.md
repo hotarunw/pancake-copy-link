@@ -1,7 +1,10 @@
 # Pancake Copy Link
 
-ショートカットでコピー`Ctrl + Shift + C` 共有`Ctrl + Shift + S` できる。
-タイトル&URLのエスケープ機能あり。
+WebページのタイトルとURLを、手軽にコピーまたはXに共有する拡張機能
+
+WebページのタイトルとURLを、タイトル\+URLのテキストまたはMarkdownのリンクとしてコピーできる
+さらにWebページのタイトルとURLを、Xに共有できる
+ショートカットまたはポップアップのボタンを押して実行する
 
 ## インストール
 
@@ -9,11 +12,11 @@
 2. `npm run build`
 3. パッケージ化されていない拡張機能を読み込む
 
-## 対応サイト
+## 機能とフォーマットとショートカット
 
-- コピー: 生テキスト
-- コピー: MarkDown
-- 共有: X(Twitter)
+- タイトル\+URLのコピー（`${title} ${url}`）：`Ctrl + Shift + C`
+- Markdownのテキストのコピー（`[$(title)](${url})`）：`Ctrl + Shift + M`
+- Xに共有（`https://x.com/intent/tweet?text=${title}&url=${url}`）：`Ctrl + Shift + S`
 
 ## 参考
 
@@ -21,6 +24,7 @@ CRXJSでChrome拡張機能をビルドしている。
 
 - [Introduction | CRXJS Vite Plugin](https://crxjs.dev/vite-plugin)
 - [【TypeScript】ReactとCRXJS Vite Pluginで作るChrome拡張機能](https://zenn.dev/7oh/scraps/98d5cdcceb9bd8)
+- [Chrome拡張機能の作る際にクリップボードにアクセスする方法](https://zenn.dev/k41531/articles/3ce99a991b3098)
 
 ## Attribution
 
@@ -35,6 +39,10 @@ magick -background none public/pancake.svg -resize 16x16   public/icon16.png
 magick -background none public/pancake.svg -resize 48x48   public/icon48.png
 magick -background none public/pancake.svg -resize 128x128 public/icon128.png
 ```
+
+--------------------
+--------------------
+--------------------
 
 # React + TypeScript + Vite
 

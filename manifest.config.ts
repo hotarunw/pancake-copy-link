@@ -21,13 +21,38 @@ export default defineManifest((env) => ({
   },
   content_scripts: [
     {
-      js: ["src/content.jsx"],
-      matches: ["https://www.google.com/*", "https://www.google.co.jp/"],
+      matches: ["<all_urls>"],
+      js: ["src/content.ts"],
     },
   ],
+  commands: {
+    copyraw: {
+      suggested_key: {
+        default: "Ctrl+Shift+C",
+      },
+      description: "Copy as raw text",
+    },
+    copymd: {
+      suggested_key: {
+        default: "Ctrl+Shift+M",
+      },
+      description: "Copy as Markdown link",
+    },
+    share: {
+      suggested_key: {
+        default: "Ctrl+Shift+S",
+      },
+      description: "Share to X",
+    },
+  },
+  background: {
+    service_worker: "src/background.ts",
+    type: "module",
+  },
   icons: {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png",
   },
+  permissions: ["tabs", "clipboardWrite"],
 }));
