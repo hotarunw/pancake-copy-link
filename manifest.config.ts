@@ -11,7 +11,7 @@ const [major, minor, patch, label = "0"] = version
 
 export default defineManifest((env) => ({
   manifest_version: 3,
-  name: env.mode === "staging" ? "[INTERNAL] " : "" + "Pancake Copy Link",
+  name: (env.command === "serve" ? "[INTERNAL] " : "") + "Pancake Copy Link",
   // up to four numbers separated by dots
   version: `${major}.${minor}.${patch}.${label}`,
   // semver is OK in "version_name"
