@@ -1,16 +1,6 @@
-import { type CopyLinkMethod, type ShareLinkMethod } from "..";
+export type Command = "copy" | "share";
 
-export interface commandTextMessage {
-  command: string;
+export interface CommandTextMessage {
+  command: Command;
   text: string;
-}
-
-export interface methodStyle {
-  title: string;
-  caption?: string;
-  key: CopyLinkMethod | ShareLinkMethod | "";
-  copy?: CopyLinkMethod;
-  share?: ShareLinkMethod;
-  avatarColor: string;
-  avatarIcon: string;
 }

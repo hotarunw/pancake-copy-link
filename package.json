@@ -1,38 +1,43 @@
 {
+  "name": "pancake-copy-link",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --fix --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "format": "prettier -w 'src/**/*.{ts,tsx}'"
+  },
   "dependencies": {
-    "@quasar/extras": "^1.16.7",
-    "quasar": "^2.13.0",
-    "vue": "^3.3.6"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@crxjs/vite-plugin": "^1.0.14",
-    "@quasar/vite-plugin": "^1.5.0",
-    "@types/chrome": "^0.0.241",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@vitejs/plugin-vue": "^2.3.4",
-    "eslint": "^8.52.0",
-    "eslint-config-prettier": "^8.10.0",
-    "eslint-config-standard-with-typescript": "^37.0.0",
-    "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-n": "^16.2.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-vue": "^9.17.0",
-    "prettier": "^3.0.3",
-    "sass": "^1.69.4",
-    "typescript": "^5.2.2",
-    "vite": "^3.2.11",
-    "vue-eslint-parser": "^9.3.2",
-    "vue-tsc": "^2.0.29"
-  },
-  "name": "copy-link2023",
-  "private": true,
-  "scripts": {
-    "build": "vue-tsc --noEmit && vite build",
-    "dev": "vite",
-    "format": "prettier --write \"**/*.+(js|json|yml|ts|tsx|vue)\"",
-    "lint": "eslint --ext .tsx,.ts,.vue src/",
-    "preview": "vite preview"
-  },
-  "type": "module",
-  "version": "0.0.0"
+    "@crxjs/vite-plugin": "^2.0.0-beta.25",
+    "@egoist/tailwindcss-icons": "^1.8.1",
+    "@eslint/js": "^9.10.0",
+    "@extend-chrome/storage": "^1.5.0",
+    "@iconify/json": "^2.2.251",
+    "@types/chrome": "^0.0.271",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "globals": "^15.9.0",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.5.0",
+    "vite": "^5.4.5"
+  }
 }
