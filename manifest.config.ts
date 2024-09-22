@@ -30,11 +30,11 @@ export default defineManifest((env) => ({
       suggested_key: {
         default: "Ctrl+Shift+C",
       },
-      description: "Copy as raw text",
+      description: "Copy as Title + URL",
     },
     copymd: {
       suggested_key: {
-        default: "Ctrl+Shift+M",
+        default: "Ctrl+Shift+X",
       },
       description: "Copy as Markdown link",
     },

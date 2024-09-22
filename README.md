@@ -1,10 +1,10 @@
 # Pancake Copy Link
 
-WebページのタイトルとURLを、手軽にコピーまたはXに共有する拡張機能
+WebページのタイトルとURLを、手軽にコピーまたはXに共有する拡張機能。
 
-WebページのタイトルとURLを、タイトル\+URLのテキストまたはMarkdownのリンクとしてコピーできる
-さらにWebページのタイトルとURLを、Xに共有できる
-ショートカットまたはポップアップのボタンを押して実行する
+WebページのタイトルとURLを、タイトル\+URLのテキストまたはMarkdownのリンクとしてコピーできる。
+さらにWebページのタイトルとURLを、Xに共有できる。
+ショートカットまたはポップアップのボタンから実行する。
 
 ## インストール
 
@@ -15,7 +15,7 @@ WebページのタイトルとURLを、タイトル\+URLのテキストまたは
 ## 機能とフォーマットとショートカット
 
 - タイトル\+URLのコピー（`${title} ${url}`）：`Ctrl + Shift + C`
-- Markdownのテキストのコピー（`[$(title)](${url})`）：`Ctrl + Shift + M`
+- Markdownのテキストのコピー（`[$(title)](${url})`）：`Ctrl + Shift + X`
 - Xに共有（`https://x.com/intent/tweet?text=${title}&url=${url}`）：`Ctrl + Shift + S`
 
 ## 参考

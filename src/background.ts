@@ -11,8 +11,8 @@ chrome.commands.onCommand.addListener((command) => {
   chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
     if (tab?.title == null || tab.url == null) return;
 
-    const title = tab.title ?? "";
-    const url = tab.url ?? "";
+    const title = tab.title;
+    const url = tab.url;
     const id = tab.id ?? chrome.tabs.TAB_ID_NONE;
 
     let text = "";
@@ -21,6 +21,7 @@ chrome.commands.onCommand.addListener((command) => {
         text = generateRawLink(title, url);
         void chrome.tabs.sendMessage(id, { command: "copy", text });
         break;
+
       case "copymd":
         text = generateMarkdownLink(title, url);
         void chrome.tabs.sendMessage(id, { command: "copy", text });
