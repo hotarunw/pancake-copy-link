@@ -1,8 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const {
-  iconsPlugin,
-  getIconCollections,
-} = require("@egoist/tailwindcss-icons");
+import { getIconCollections, iconsPlugin } from "@egoist/tailwindcss-icons";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
