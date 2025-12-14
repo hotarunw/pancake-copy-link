@@ -18,7 +18,8 @@ const escapeMarkdownSpecialChars = (str: string): string => {
     .replaceAll("+", "\\+")
     .replaceAll("-", "\\-")
     .replaceAll(".", "\\.")
-    .replaceAll("!", "\\!");
+    .replaceAll("!", "\\!")
+    .replaceAll(":", "\\:"); // Obsidianのリンクだとコロンをエスケープしないと表示が崩れるためエスケープ追加
 };
 
 export const generateRawLink = (title: string, url: string): string => {
